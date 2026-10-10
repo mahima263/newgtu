@@ -1,0 +1,16 @@
+/* Start Conversation — Zoho form on a parallax campus background */
+.contact-form { position: relative; overflow: hidden; padding: 96px 0 110px; background: var(--brown); isolation: isolate; }
+.contact-form__bg { position: absolute; left: 0; right: 0; top: -30%; height: 160%; background: url('../assets/ui/contact-bg.jpg') center/cover no-repeat; z-index: -2; will-change: transform; }
+.contact-form::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(66,30,24,.78) 0%, rgba(66,30,24,.62) 100%); z-index: -1; }
+.contact-form__inner { display: flex; justify-content: center; }
+.contact-form__card { width: 100%; max-width: 860px; background: #f9f1e4; border-radius: 8px; box-shadow: 0 30px 70px rgba(0,0,0,.35); padding: 8px 0 0; overflow: hidden; }
+.contact-form iframe { display: block; width: 100%; height: 760px; min-height: 760px; border: 0; background: transparent; }
+@media (max-width: 991px) {
+  .contact-form { padding: 56px 0 64px; }
+  .contact-form__bg { top: 0; height: 100%; }
+        .contact-form iframe { height: 860px; min-height: 860px; }
+}
+@media (max-width: 600px) {
+  .contact-form { padding: 40px 0 48px; }
+      .contact-form iframe { height: 980px; min-height: 980px; }
+}

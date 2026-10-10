@@ -1,0 +1,41 @@
+/* All Opportunities — grouped listing of every giving opportunity */
+.opps-hero { min-height: 372px; }
+.opps-hero__lead { position: relative; max-width: 640px; margin: 18px auto 0; font-size: 20px; line-height: 1.45; color: rgba(255,255,255,.9); }
+.opps { padding: 88px 0; }
+.opps--olive { background: var(--white); }
+.opps--gold { background: var(--peach); }
+.opps--rose { background: var(--white); }
+.opps__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 40px; }
+.opps__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 8px; }
+.opps--olive .opps__eyebrow { color: var(--olive); } .opps--gold .opps__eyebrow { color: #8f6a2c; } .opps--rose .opps__eyebrow { color: var(--rose); }
+.opps__title { font-size: 48px; line-height: 1.05; font-weight: 700; color: var(--brown); margin: 0; }
+.opps__hublink { flex: 0 0 auto; }
+.opps__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.opp-card { display: flex; flex-direction: column; background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(66,30,24,.08); transition: transform .25s, box-shadow .25s; }
+.opps--olive .opp-card, .opps--rose .opp-card { background: #f9f8f8; }
+.opp-card:hover { transform: translateY(-6px); box-shadow: 0 22px 44px rgba(66,30,24,.16); }
+.opp-card__img { display: block; height: 240px; overflow: hidden; }
+.opp-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.opp-card:hover .opp-card__img img { transform: scale(1.05); }
+.opp-card__body { display: flex; flex-direction: column; flex: 1; padding: 26px 26px 30px; }
+.opp-card__pill { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; color: var(--white); margin-bottom: 14px; }
+.opps--olive .opp-card__pill { background: var(--olive); } .opps--gold .opp-card__pill { background: var(--gold); color: var(--brown); } .opps--rose .opp-card__pill { background: var(--rose); }
+.opp-card__title { font-size: 24px; line-height: 1.2; font-weight: 700; margin: 0 0 12px; }
+.opp-card__title a { color: var(--brown); text-decoration: none; }
+.opp-card__title a:hover { color: var(--brick); }
+.opp-card__text { font-size: 16px; line-height: 1.5; color: #4a3a36; margin: 0 0 24px; }
+.opp-card .btn { margin-top: auto; align-self: flex-start; }
+@media (max-width: 1240px) { .opps__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 960px) {
+  .opps { padding: 56px 0; }
+  .opps__head { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 24px; }
+  .opps__title { font-size: 36px; }
+  .opps-hero__lead { font-size: 17px; padding: 0 var(--gutter); }
+}
+@media (max-width: 600px) {
+  .opps__grid { grid-template-columns: 1fr; gap: 18px; }
+  .opp-card__img { height: 200px; }
+  .opp-card__body { padding: 20px 20px 24px; }
+  .opp-card__title { font-size: 20px; }
+  .opp-card .btn { align-self: stretch; }
+}

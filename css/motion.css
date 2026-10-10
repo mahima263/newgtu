@@ -1,0 +1,106 @@
+/* =========================================================
+   Motion & hover layer — GSAP / AOS / CSS transitions
+   Loaded after all page CSS. Safe to delete without breaking layout.
+   ========================================================= */
+
+/* ---------- AOS tweaks ---------- */
+[data-aos] { pointer-events: auto; }
+html:not(.no-js) [data-aos^="fade"] { transition-timing-function: cubic-bezier(.22,.61,.36,1); }
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* ---------- Buttons: lift + sheen ---------- */
+.btn { position: relative; overflow: hidden; transition: background .25s, color .25s, border-color .25s, transform .25s cubic-bezier(.22,.61,.36,1), box-shadow .25s; }
+.btn::after {
+  content: ''; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.35) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg); transition: left .6s ease; pointer-events: none;
+}
+.btn:hover::after { left: 125%; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(66,30,24,.18); }
+.btn--outline:hover, .btn--outline-white:hover, .btn--outline-brick:hover { box-shadow: 0 10px 24px rgba(66,30,24,.12); }
+.btn .arrow, .btn svg { transition: transform .25s; }
+.btn:hover .arrow, .btn:hover svg { transform: translate(3px,-3px); }
+
+/* ---------- Nav: animated underline ---------- */
+.nav__link { position: relative; }
+.nav__link::before {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 8px; height: 2px;
+  background: var(--brick); transform: scaleX(0); transform-origin: left; transition: transform .3s cubic-bezier(.22,.61,.36,1);
+}
+.nav__item:hover > .nav__link::before, .nav__item.is-active > .nav__link::before { transform: scaleX(1); }
+.nav__dropdown a { transition: background .2s, color .2s, padding-left .2s; }
+.nav__dropdown a:hover { padding-left: 26px; }
+.site-header { transition: box-shadow .3s; }
+.site-header.is-scrolled { box-shadow: 0 6px 24px rgba(66,30,24,.10); }
+
+/* ---------- Chips ---------- */
+.chip { transition: background .25s, color .25s, transform .25s; }
+a.chip:hover { background: var(--brick); color: var(--white); transform: translateY(-2px); }
+
+/* ---------- Image zoom on hover (cards, media blocks) ---------- */
+.card__img, .story-card__img, .st-card__img, .pr-feat-card__img, .pr-story__img, .pr-opp__img,
+.prow__media, .split__media, .video-block, .st-photo, .pr-split__media, .st-feature__media, .stories-hero__media { overflow: hidden; }
+.card__img img, .story-card__img img, .st-card__img img, .pr-feat-card__img img, .pr-story__img img, .pr-opp__img img,
+.prow__media img, .split__media img, .video-block img, .st-photo img, .pr-split__media img, .st-feature__media img {
+  transition: transform .8s cubic-bezier(.22,.61,.36,1), filter .5s;
+}
+.card:hover .card__img img, .story-card:hover .story-card__img img, .st-card:hover .st-card__img img,
+.pr-feat-card:hover .pr-feat-card__img img, .pr-story:hover .pr-story__img img, .pr-opp:hover .pr-opp__img img,
+.prow:hover .prow__media img, .split__media:hover img, .video-block:hover img, .st-photo:hover img,
+.pr-split__media:hover img, .st-feature__media:hover img { transform: scale(1.06); }
+
+/* ---------- Cards: lift ---------- */
+.card, .story-card, .st-card, .pr-feat-card, .pr-story, .pr-opp, .leader, .pr-enable__item, .giving-card, .gv-card {
+  transition: transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .35s;
+}
+.story-card:hover, .st-card:hover, .pr-feat-card:hover, .pr-story:hover, .pr-opp:hover, .giving-card:hover, .gv-card:hover {
+  transform: translateY(-6px); box-shadow: 0 18px 40px rgba(66,30,24,.14);
+}
+.story-card__title, .st-card__title, .card__title, .pr-story__title { transition: color .25s; }
+.story-card:hover .story-card__title, .st-card:hover .st-card__title, .card:hover .card__title, .pr-story:hover .pr-story__title { color: var(--brick); }
+
+/* ---------- Play button pulse ---------- */
+.play { transition: transform .3s, background .3s, box-shadow .3s; }
+.play::before { content: ''; position: absolute; inset: -5px; border-radius: 50%; border: 2px solid rgba(255,255,255,.6); animation: playPulse 2.2s ease-out infinite; }
+@keyframes playPulse { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(1.6); opacity: 0; } }
+.video-block:hover .play { background: rgba(171,69,49,.85); border-color: #fff; box-shadow: 0 0 0 10px rgba(255,255,255,.12); }
+
+/* ---------- Hero ---------- */
+.hero__media img { will-change: transform; }
+.hero__scroll svg { animation: bob 1.8s ease-in-out infinite; }
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+.hero__logo, .hero__tag, .hero__title, .hero__scroll, .hero__icon { opacity: 0; }
+html.no-js .hero__logo, html.no-js .hero__tag, html.no-js .hero__title, html.no-js .hero__scroll, html.no-js .hero__icon,
+.hero.is-ready .hero__logo, .hero.is-ready .hero__tag, .hero.is-ready .hero__title, .hero.is-ready .hero__scroll, .hero.is-ready .hero__icon { opacity: 1; }
+
+/* ---------- Social icons / footer links ---------- */
+.footer__social a { display: inline-block; transition: transform .25s; }
+.footer__social a:hover { transform: translateY(-3px) scale(1.08); }
+.footer__links a { transition: opacity .2s, letter-spacing .2s; }
+.footer__links a:hover { opacity: .85; }
+
+/* ---------- Progress ring glow ---------- */
+.ring-fill { filter: drop-shadow(0 0 6px rgba(255,255,255,.45)); }
+
+/* ---------- Section eyebrow rule draw ---------- */
+.rule { transform-origin: center; }
+
+/* ---------- Subnav / tabs ---------- */
+.subnav__link { transition: opacity .2s, color .2s; }
+.tab { transition: color .2s, border-color .2s; }
+.acc__btn { transition: color .2s; } .acc__btn:hover { color: var(--brick); }
+
+/* ---------- Form fields ---------- */
+input, textarea, select { transition: box-shadow .2s, border-color .2s; }
+input:focus, textarea:focus, select:focus { outline: none; box-shadow: 0 0 0 3px rgba(171,69,49,.25); }
+
+/* ---------- Image gallery dots ---------- */
+.pr-dots span { transition: transform .2s, background .2s; }
+
+/* ---------- Mobile: lighten effects ---------- */
+@media (hover: none) {
+  .btn:hover { transform: none; box-shadow: none; }
+  .story-card:hover, .st-card:hover, .pr-feat-card:hover { transform: none; }
+}

@@ -1,0 +1,181 @@
+/* =========================================================
+   Greater Than Us — Giving page (Figma "Giving Page")
+   ========================================================= */
+
+/* ---------- Hero ---------- */
+.hero--giving { min-height: 383px; }
+.hero--giving .hero__media img { object-position: 50% 40%; }
+.hero--giving .hero__title { margin-top: 0; font-size: 80px; line-height: 1.2; }
+
+/* ---------- Section headings (spaced caps) ---------- */
+.g-heading { font-size: 42px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; line-height: 1.38; text-align: center; }
+.g-lead { margin: 0 auto; font-size: 24px; line-height: 1.25; text-align: center; }
+
+/* ---------- Explore the priorities ---------- */
+.gexplore { padding: 97px 0 69px; }
+.gexplore__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 90px; }
+.pcard {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  min-height: 368px; padding: 35px 30px 39px; border: 1px solid var(--brown); border-radius: 12px; background: var(--white);
+}
+.pcard__icon { height: 80px; display: flex; align-items: center; justify-content: center; }
+.pcard__icon img { max-height: 80px; width: auto; }
+.pcard__title { margin-top: 16px; font-size: 32px; font-weight: 700; line-height: 1.1; }
+.pcard__text { margin-top: 18px; font-size: 18px; line-height: 1.17; max-width: 330px; }
+.pcard .btn { margin-top: auto; padding-top: 0; min-height: 41px; padding: 0 28px; border-radius: 5px; }
+.pcard--olive .pcard__title { color: var(--olive); }
+.pcard--gold .pcard__title { color: var(--gold); }
+.pcard--rose .pcard__title { color: var(--rose); }
+.pcard__text + .btn { margin-top: 30px; }
+
+/* ---------- Give now (peach) ---------- */
+.ggive { padding: 84px 0 100px; }
+.ggive .g-lead { margin-top: 48px; max-width: 800px; }
+.ggive__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; max-width: 1138px; margin: 72px auto 0; }
+.gcard { display: flex; flex-direction: column; align-items: flex-start; min-height: 278px; padding: 40px 45px 37px; border-radius: 12px; }
+.gcard--brick { background: var(--brick); color: var(--white); }
+.gcard--white { background: var(--white); color: var(--brown); }
+.gcard__title { font-size: 32px; font-weight: 700; line-height: 1.1; }
+.gcard__text { margin-top: 26px; font-size: 18px; line-height: 1.22; max-width: 450px; }
+.gcard .btn { margin-top: auto; min-height: 41px; padding: 0 24px; border-radius: 5px; }
+.gcard__text + .btn { margin-top: 58px; }
+
+/* ---------- Support a cause ---------- */
+.gsupport { padding: 100px 0 100px; text-align: center; }
+.gsupport .btn { margin-top: 73px; min-height: 63px; padding: 0 40px; border-radius: 5px; }
+
+/* ---------- Our goal (brown) ---------- */
+.ggoal { padding: 100px 0 100px; text-align: center; }
+.ggoal .progress { margin-top: 74px; max-width: 1064px; gap: 60px; }
+.ggoal .progress__stat .label { font-size: 26px; }
+.ggoal .progress__stat .value { margin-top: 12px; font-size: 40px; }
+.ggoal .progress__stat .rule { width: 60px; height: 2px; margin: 26px auto 30px; background: var(--brick); opacity: 1; }
+.ggoal .progress__stat .inr { font-size: 40px; font-weight: 700; line-height: 1; }
+
+/* ---------- CSR ---------- */
+.gcsr { position: relative; padding: 78px 0 98px; text-align: center; }
+.gcsr__icon { width: 109px; height: 109px; margin: 0 auto; }
+.gcsr .g-heading { margin-top: 66px; line-height: 1.52; }
+.gcsr .g-lead { margin-top: 46px; max-width: 1020px; }
+.gcsr__actions { display: flex; justify-content: center; gap: 34px; margin-top: 76px; }
+.gcsr__actions .btn { min-height: 63px; padding: 0 34px; border-radius: 5px; }
+
+/* ---------- Giving stories (peach) ---------- */
+.gstories { padding: 90px 0 80px; }
+.gstories__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; margin-top: 76px; }
+.scard { display: flex; flex-direction: column; background: var(--white); border-radius: 12px; overflow: hidden; }
+.scard__img { height: 295px; overflow: hidden; }
+.scard__img img { width: 100%; height: 100%; object-fit: cover; }
+.scard__body { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 30px 26px 26px; }
+.scard__eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.scard__title { margin-top: 14px; font-size: 24px; font-weight: 700; line-height: 1.2; }
+.scard__text { margin-top: 12px; font-size: 15px; line-height: 1.1; }
+.scard .btn { margin-top: auto; min-height: 38px; min-width: 158px; padding: 0 24px; border-radius: 5px; }
+.scard__text + .btn { margin-top: 26px; }
+
+/* ---------- Make your gift (methods) ---------- */
+.gmethods { padding: 90px 0 110px; }
+.gmethods .g-lead { margin-top: 48px; }
+.acc { max-width: 1146px; margin: 76px auto 0; }
+.acc__item { border-bottom: 2px solid #808080; }
+.acc__item:last-child { border-bottom: 0; }
+.acc__btn {
+  display: flex; align-items: center; justify-content: space-between; gap: 40px; width: 100%;
+  padding: 30px 0 40px; border: 0; background: none; text-align: left; color: var(--brown);
+}
+.acc__item:first-child .acc__btn { padding-top: 0; }
+.acc__title { font-size: 32px; font-weight: 700; line-height: 1.1; color: var(--brick); }
+.acc__desc { margin-top: 18px; font-size: 20px; line-height: 1.3; }
+.acc__cta { flex: none; display: inline-flex; align-items: center; gap: 20px; font-size: 20px; font-weight: 700; color: var(--brick); white-space: nowrap; }
+.acc__cta svg { width: 22px; height: 14px; transition: transform .25s; }
+.acc__item.is-open .acc__cta svg { transform: rotate(180deg); }
+.acc__panel { display: none; padding: 0 0 44px; font-size: 18px; line-height: 1.4; }
+.acc__item.is-open .acc__panel { display: block; }
+.acc__panel p + p { margin-top: 12px; }
+.acc__panel dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 24px; margin: 0; }
+.acc__panel dt { font-weight: 700; }
+.acc__panel dd { margin: 0; }
+
+/* giving form (inside Online Giving) */
+.gform { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; max-width: 760px; }
+.gform label { display: block; font-size: 14px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px; }
+.gform input, .gform select, .gform textarea { width: 100%; padding: 12px 14px; font: inherit; font-size: 16px; color: var(--brown); border: 1px solid #a08e8b; border-radius: 5px; background: var(--white); }
+.gform input:focus, .gform select:focus, .gform textarea:focus { outline: 2px solid var(--brick); outline-offset: 1px; }
+.gform__full { grid-column: 1 / -1; }
+.gform__amounts { display: flex; flex-wrap: wrap; gap: 10px; }
+.gform__amounts label { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 10px 16px; border: 1px solid #a08e8b; border-radius: 5px; font-size: 14px; cursor: pointer; }
+.gform__amounts input { width: auto; }
+.gform__amounts label:has(input:checked) { background: var(--brick); color: var(--white); border-color: var(--brick); }
+.gform .btn { justify-self: start; }
+
+/* ---------- Not sure (brown) ---------- */
+.gnotsure { padding: 86px 0 96px; text-align: center; }
+.gnotsure h2 { font-size: 42px; font-weight: 700; line-height: 1.2; }
+.gnotsure .g-lead { margin-top: 44px; max-width: 1100px; line-height: 1.22; }
+.gnotsure .btn { margin-top: 61px; min-height: 63px; padding: 0 40px; border-radius: 5px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1240px) {
+  .gexplore__grid, .gstories__grid { gap: 24px; }
+  .pcard { padding: 30px 20px 32px; }
+  .gcard { padding: 32px; }
+}
+@media (max-width: 960px) {
+  .hero--giving { min-height: 300px; }
+  .hero--giving .hero__title { font-size: 36px; letter-spacing: 0; text-transform: none; }
+  .g-heading { font-size: 24px; letter-spacing: .12em; line-height: 1.3; }
+  .g-heading br { display: none; }
+  .g-lead { font-size: 17px; }
+  .gexplore { padding: 48px 0 44px; }
+  .gexplore__grid { grid-template-columns: 1fr; margin-top: 36px; gap: 16px; }
+  .pcard { min-height: 0; padding: 28px 20px; }
+  .pcard__icon { height: 60px; } .pcard__icon img { max-height: 60px; }
+  .pcard__title { font-size: 26px; margin-top: 16px; }
+  .pcard__text { font-size: 16px; margin-top: 14px; }
+  .pcard__text + .btn { margin-top: 24px; }
+  .ggive { padding: 48px 0 56px; }
+  .ggive .g-lead { margin-top: 20px; }
+  .ggive__cards { grid-template-columns: 1fr; gap: 16px; margin-top: 32px; }
+  .gcard { min-height: 0; padding: 28px 24px; }
+  .gcard__title { font-size: 24px; }
+  .gcard__text { font-size: 16px; margin-top: 14px; }
+  .gcard__text + .btn { margin-top: 24px; }
+  .gsupport { padding: 56px 0; }
+  .gsupport .btn { margin-top: 28px; min-height: 52px; }
+  .ggoal { padding: 56px 0; }
+  .ggoal .progress { margin-top: 36px; }
+  .ggoal .progress__stat .label { font-size: 17px; }
+  .ggoal .progress__stat .value, .ggoal .progress__stat .inr { font-size: 26px; }
+  .ggoal .progress__stat .rule { margin: 14px auto 16px; }
+  .gcsr { padding: 48px 0 56px; }
+  .gcsr__icon { width: 80px; height: 80px; }
+  .gcsr .g-heading { margin-top: 28px; }
+  .gcsr .g-lead { margin-top: 20px; }
+  .gcsr__actions { flex-direction: column; align-items: center; gap: 14px; margin-top: 32px; }
+  .gcsr__actions .btn { width: 100%; max-width: 360px; min-height: 52px; white-space: normal; text-align: center; }
+  .gstories { padding: 48px 0 56px; }
+  .gstories__grid { grid-template-columns: 1fr; margin-top: 32px; gap: 20px; }
+  .scard__img { height: 220px; }
+  .scard__title { font-size: 20px; }
+  .gmethods { padding: 48px 0 56px; }
+  .gmethods .g-lead { margin-top: 20px; }
+  .acc { margin-top: 36px; }
+  .acc__btn { flex-direction: column; align-items: flex-start; gap: 16px; padding: 24px 0 28px; }
+  .acc__title { font-size: 22px; }
+  .acc__desc { font-size: 16px; margin-top: 10px; }
+  .acc__cta { font-size: 16px; }
+  .acc__panel { font-size: 16px; padding-bottom: 28px; }
+  .acc__panel dl { grid-template-columns: 1fr; gap: 4px; }
+  .gform { grid-template-columns: 1fr; gap: 16px; }
+  .gnotsure { padding: 56px 0; }
+  .gnotsure h2 { font-size: 28px; }
+  .gnotsure .g-lead { margin-top: 20px; }
+  .gnotsure .btn { margin-top: 28px; min-height: 52px; }
+}
+
+/* gift type links */
+.gift-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; }
+.gift-links .btn { min-height: 48px; }
+@media (max-width: 600px) { .gift-links .btn { width: 100%; } }
+
+.acc__address { font-style: normal; line-height: 1.6; margin: 0 0 16px; padding-left: 16px; border-left: 2px solid var(--brick); }
